@@ -1,0 +1,2088 @@
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 0
+	st.capacity = 0
+	st.data[0x0] =
+	{
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 0
+	st.capacity = 0
+	st.data[0x0] =
+	{
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 0
+	st.capacity = 1
+	st.data[0x122e05fe8] =
+	{
+		 [0]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 1
+	st.capacity = 1
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 1
+	st.capacity = 1
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 1
+	st.capacity = 1
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 1
+	st.capacity = 2
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		 [1]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 2
+	st.capacity = 2
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackCtor tack [0x16d9071f0] name = st at stack.cpp:45 born at main.cpp:6 (main)
+{
+	st.size     = 2
+	st.capacity = 2
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 2
+	st.capacity = 2
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 2
+	st.capacity = 2
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 2
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		 [2]: -42 (POISON)
+		 [3]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 4
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:50 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:174 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPush tack [0x16d9071f0] name = st at stack.cpp:60 born at main.cpp:6 (main)
+{
+	st.size     = 13
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		*[12]: 100
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 13
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		*[12]: 100
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 13
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		*[12]: 100
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 13
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		*[12]: 100
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 12
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		*[11]: 500
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 11
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		*[10]: 400
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 10
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		*[9]: 300
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 9
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		*[8]: 200
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 8
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		*[7]: 100
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 7
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		*[6]: 500
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 6
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		*[5]: 400
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 5
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		*[4]: 300
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 16
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+		 [8]: -42 (POISON)
+		 [9]: -42 (POISON)
+		 [10]: -42 (POISON)
+		 [11]: -42 (POISON)
+		 [12]: -42 (POISON)
+		 [13]: -42 (POISON)
+		 [14]: -42 (POISON)
+		 [15]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 4
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		*[3]: 200
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:65 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:156 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From resize tack [0x16d9071f0] name = st at stack.cpp:187 born at main.cpp:6 (main)
+{
+	st.size     = 3
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		*[2]: 100
+		 [3]: -42 (POISON)
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
+-----------------------------------------------------------
+CODE ERROR: NO_ERROR
+From stackPop tack [0x16d9071f0] name = st at stack.cpp:75 born at main.cpp:6 (main)
+{
+	st.size     = 2
+	st.capacity = 8
+	st.data[0x122e05fe8] =
+	{
+		*[0]: 1
+		*[1]: 2
+		 [2]: -42 (POISON)
+		 [3]: -42 (POISON)
+		 [4]: -42 (POISON)
+		 [5]: -42 (POISON)
+		 [6]: -42 (POISON)
+		 [7]: -42 (POISON)
+	}
+}
