@@ -2,15 +2,36 @@
 #define STACK_HEADER
 
 #define ON_DEBUG(...) __VA_ARGS__;
-#define INIT(st) st.left_canary = 0, st.name = #st, st.filename = __FILE__, st.funcname = __func__, st.line = __LINE__
+#define DBG(...) __VA_ARGS__
+#define INIT_STRUCT_CANARY                                              \
+if (counter_struct_canary == 0){                                        \
+    counter_struct_canary++;                                            \
+    STRUCT_CANARY *= (((size_t)stk) << 8) + (((size_t)stk) >> 8);       \
+}
+
+#define INIT_DATA_CANARY                                                        \
+if (counter_data_canary == 0){                                                  \
+    counter_data_canary++;                                                      \
+    DATA_CANARY *= (((size_t)&stk->data) << 8) + (((size_t)&stk->data) >> 8);   \
+}
+
+#define INIT_XOR_KEY                                \
+if (counter_key == 0){                              \
+    counter_key++;                                  \
+    KEY = (size_t)stk;                              \
+}
+
+#define INIT(st) 0, #st, __FILE__, __func__, __LINE__
+#define INIT_ARGS size_t left_canary, const char* name, const char* filename, const char* funcname, size_t line
+#define PUT_INIT_ARGS(st) st->left_canary = left_canary; st->name = name; st->filename = filename; st->funcname = funcname; st->line = line;
+
 #define DUMB_ARGS(st) st, __FILE__, __func__, __LINE__
 #define STACK_ASSERT(st)                                                \
 {                                                                       \
-    if (!stackErr(stk)){                                                \
+    if (stackErr(st)){                                                  \
         stackDump(DUMB_ARGS(st));                                       \
     }                                                                   \
 }
-#define DBG(...) __VA_ARGS__
 
 enum Errors{
     NO_ERROR,
@@ -33,27 +54,17 @@ enum Function{
 
 const char DUMP_FILENAME[] = "./dump.txt";
 const int POISON = -42;
+const int PUSH_RESIZE_MULTIPLIER = 2;
+const int POP_RESIZE_DIVIDER = 2;
+const int POP_MAX_CAPACITY_DIVIDE_SIZE_VALUE = 4;
 
 typedef int StackElem;
 
-struct Stack{
-    ON_DEBUG(size_t left_canary)
-    ON_DEBUG(const char* name)
-    ON_DEBUG(const char* filename)
-    ON_DEBUG(const char* funcname)
-    ON_DEBUG(size_t line)
+struct Stack;
 
-    size_t size;
-    size_t capacity;
-    StackElem* data;
-
-    ON_DEBUG(size_t right_canary)
-    ON_DEBUG(size_t hash)
-};
-
-int stackCtor(Stack* stk, size_t count, ...);
-int stackPush(Stack* stk, StackElem value);
-int stackPop(Stack* stk, StackElem* value);
-int stackDtor(Stack* stk);
+Stack* stackCtor(INIT_ARGS, size_t count, ...);
+int stackPush(Stack** stk, StackElem value);
+int stackPop(Stack** stk, StackElem* value);
+int stackDtor(Stack** stk);
 
 #endif
