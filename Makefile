@@ -1,3 +1,5 @@
+.PHONY: target
+
 Headers := stack_hcpp/stack.h
 Objects := obj/main.o obj/stack.o
 
@@ -9,3 +11,6 @@ obj/main.o: main.cpp $(Headers)
 
 obj/stack.o: stack_hcpp/stack.cpp $(Headers)
 	g++ -c stack_hcpp/stack.cpp -o obj/stack.o
+
+target:
+	mkdir obj
