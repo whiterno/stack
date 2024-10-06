@@ -29,7 +29,7 @@ static void putDataCanaries(Stack* stk);
 static const char* errorToString(Errors err);
 static unsigned int hashAlgorithm(char* key, size_t len);
 static unsigned int hashStack(Stack* stk);
-static void ptrXOR(Stack** stk);
+static Stack* ptrXOR(Stack* stk);
 
 ON_DEBUG(static size_t STRUCT_CANARY = time(NULL))
 ON_DEBUG(static size_t DATA_CANARY = time(NULL))
@@ -55,53 +55,52 @@ Stack* stackCtor(INIT_ARGS, size_t count, ...){
 
     INIT_XOR_KEY
 
-    //ptrXOR(&stk);
+    stk = ptrXOR(stk);
     for (size_t elem = 0; elem < count; elem++){
-        stackPush(&stk, va_arg(argptr, StackElem));
+        stackPush(stk, va_arg(argptr, StackElem));
     }
 
     va_end(argptr);
 
+    stk = ptrXOR(stk);
     STACK_ASSERT(stk)
+    stk = ptrXOR(stk);
     return stk;
 }
 
-int stackPush(Stack** stk, StackElem value){
-    //stackDump(NULL, __FILE__, __func__, __LINE__);
-    //ptrXOR(stk);
+int stackPush(Stack* stk, StackElem value){
+    stk = ptrXOR(stk);
 
-    STACK_ASSERT(*stk)
+    STACK_ASSERT(stk)
 
-    pushResize(*stk);
-    (*stk)->data[(*stk)->size++] = value;
-    ON_DEBUG((*stk)->hash = hashStack(*stk))
+    pushResize(stk);
+    stk->data[stk->size++] = value;
+    ON_DEBUG(stk->hash = hashStack(stk))
 
-    STACK_ASSERT(*stk)
-    //ptrXOR(stk);
+    STACK_ASSERT(stk)
     return NO_ERROR;
 }
 
-int stackPop(Stack** stk, StackElem* value){
-    //ptrXOR(stk);
+int stackPop(Stack* stk, StackElem* value){
+    stk = ptrXOR(stk);
 
-    STACK_ASSERT(*stk)
+    STACK_ASSERT(stk)
 
-    if (popResize(*stk) == STACK_UNDERFLOW){
+    if (popResize(stk) == STACK_UNDERFLOW){
         return STACK_UNDERFLOW;
     }
 
-    (*stk)->size--;
-    (*stk)->data[(*stk)->size] = POISON;
-    *value = (*stk)->data[(*stk)->size];
-    ON_DEBUG((*stk)->hash = hashStack(*stk))
+    stk->size--;
+    stk->data[stk->size] = POISON;
+    *value = stk->data[stk->size];
+    ON_DEBUG(stk->hash = hashStack(stk))
 
-    STACK_ASSERT(*stk)
-    //ptrXOR(stk);
+    STACK_ASSERT(stk)
     return NO_ERROR;
 }
 
 int stackDtor(Stack** stk){
-    //ptrXOR(stk);
+    *stk = ptrXOR(*stk);
     STACK_ASSERT(*stk)
 
     free((char*)(*stk)->data DBG(- sizeof(size_t)));
@@ -313,8 +312,9 @@ static unsigned int hashAlgorithm(char* key, size_t len){
     return h;
 }
 
+// TODO add const everywhere you want
 static unsigned int hashStack(Stack* stk){
-    size_t length_struct = sizeof(stk->data) + sizeof(stk->size) + sizeof(stk->capacity) + DBG(+ sizeof(size_t));
+    const size_t length_struct = sizeof(stk->data) + sizeof(stk->size) + sizeof(stk->capacity) + DBG(+ sizeof(size_t));
     char* ptr_struct = (char*)(&stk->size);
 
     unsigned int hash1 = hashAlgorithm(ptr_struct, length_struct);
@@ -330,6 +330,8 @@ static unsigned int hashStack(Stack* stk){
     return hash1 + hash2;
 }
 
-static void ptrXOR(Stack** stk){
-    *stk = (Stack*)((size_t) stk ^ KEY);
+static Stack* ptrXOR(Stack* stk){
+    stk = (Stack*)((size_t) stk ^ KEY);
+
+    return stk;
 }

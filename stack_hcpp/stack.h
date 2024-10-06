@@ -29,6 +29,7 @@ if (counter_key == 0){                              \
 #define STACK_ASSERT(st)                                                \
 {                                                                       \
     if (stackErr(st)){                                                  \
+        printf("shit");                                                 \
         stackDump(DUMB_ARGS(st));                                       \
     }                                                                   \
 }
@@ -63,8 +64,8 @@ typedef int StackElem;
 struct Stack;
 
 Stack* stackCtor(INIT_ARGS, size_t count, ...);
-int stackPush(Stack** stk, StackElem value);
-int stackPop(Stack** stk, StackElem* value);
+int stackPush(Stack* stk, StackElem value);
+int stackPop(Stack* stk, StackElem* value);
 int stackDtor(Stack** stk);
 
 #endif
