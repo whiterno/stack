@@ -18,7 +18,7 @@ if (counter_data_canary == 0){                                                  
 #define INIT_XOR_KEY                                \
 if (counter_key == 0){                              \
     counter_key++;                                  \
-    KEY = (size_t)stk;                              \
+    KEY = (size_t)time(NULL);                       \
 }
 
 #define INIT(st) 0, #st, __FILE__, __func__, __LINE__
@@ -29,7 +29,6 @@ if (counter_key == 0){                              \
 #define STACK_ASSERT(st)                                                \
 {                                                                       \
     if (stackErr(st)){                                                  \
-        printf("shit");                                                 \
         stackDump(DUMB_ARGS(st));                                       \
     }                                                                   \
 }

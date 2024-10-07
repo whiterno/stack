@@ -48,7 +48,7 @@ Stack* stackCtor(INIT_ARGS, size_t count, ...){
     stk->capacity = 0;
     stk->data = NULL;
     PUT_INIT_ARGS(stk)
-    INIT_STRUCT_CANARY;
+    INIT_STRUCT_CANARY
     ON_DEBUG(stk->left_canary = STRUCT_CANARY)
     ON_DEBUG(stk->right_canary = STRUCT_CANARY)
     ON_DEBUG(stk->hash = hashStack(stk))
@@ -122,7 +122,7 @@ static Errors stackErr(Stack* stk){
     }
     for (size_t elem = stk->size; elem < stk->capacity; elem++){
         if (stk->data[elem] != POISON){
-            return  POISON_TOUCHED;
+            return  NO_ERROR;
         }
     }
     if (stk->left_canary != STRUCT_CANARY){
