@@ -1,45 +1,29 @@
 #include <stdio.h>
+#include <time.h>
 
 #include "./stack_hcpp/stack.h"
 
+const int STACK_SHIFT_DATA = 56;
+
 int main(){
-    Stack* st = stackCtor(INIT(st), 2, 1, 2);
-    int x = 0;
-    stackPush(st, 1);
-    stackPush(st, 2);
-    stackPush(st, 3);
-    stackPush(st, 4);
-    stackPush(st, 3);
-    stackPush(st, 4);
-    stackPop(st, &x);
-    stackPop(st, &x);
-    stackPop(st, &x);
+    int code_err = 0;
 
-    Stack* st2 = stackCtor(INIT(st2), 2, 1, 2);
-    stackPush(st2, 1);
-    stackPush(st2, 2);
-    stackPush(st2, 3);
-    stackPush(st2, 4);
-    stackPush(st2, 3);
-    stackPush(st2, 4);
-    stackPop(st2, &x);
-    stackPop(st2, &x);
-    stackPop(st2, &x);
+    size_t i_know_your_time = time(NULL);
+    Stack* st = stackCtor(INIT(st) 2, 1, 2);
+    Stack* real_stk_ptr = (Stack*) ((size_t) st ^ i_know_your_time);
 
-    stackDtor(&st);
-    stackDtor(&st2);
+    for (StackElem i = 1; i < 100; i++)
+        if ((code_err = stackPush(st, i)) != 0)
+            return code_err;
 
-    Stack* st3 = stackCtor(INIT(st3), 2, 1, 2);
-    stackPush(st3, 1);
-    stackPush(st3, 2);
-    stackPush(st3, 3);
-    stackPush(st3, 4);
-    stackPush(st3, 3);
-    stackPush(st3, 4);
-    stackPop(st3, &x);
-    stackPop(st3, &x);
-    stackPop(st3, &x);
+    (*((StackElem**) ((char*) real_stk_ptr + STACK_SHIFT_DATA)))[90] = 11111111;
 
-    stackDtor(&st3);
-
+    StackElem var_for_print = 0;
+    for (int i = 1; i < 101; i++)
+    {
+        if ((code_err = stackPop(st, &var_for_print)) != 0)
+            return code_err;
+        printf("%d ", var_for_print);
+    }
+    putchar('\n');
 }

@@ -6,40 +6,45 @@
 
 #include "stack.h"
 
+#ifndef NOT_ENCAPSULATION
+
 struct Stack{
-    ON_DEBUG(size_t left_canary)
-    ON_DEBUG(const char* name)
-    ON_DEBUG(const char* filename)
-    ON_DEBUG(const char* funcname)
-    ON_DEBUG(size_t line)
+    DBG_CANARY(size_t left_canary);
+    DBG(const char* name);
+    DBG(const char* filename);
+    DBG(const char* funcname);
+    DBG(size_t line);
 
     size_t size;
     size_t capacity;
     StackElem* data;
 
-    ON_DEBUG(size_t right_canary)
-    ON_DEBUG(unsigned int hash)
+    DBG_CANARY(size_t right_canary);
+    DBG_HASH(unsigned int hash);
 };
+
+#endif
 
 static int popResize(Stack* stk);
 static int pushResize(Stack* stk);
-static Errors stackErr(Stack* stk);
-static int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line);
-static void putDataCanaries(Stack* stk);
-static const char* errorToString(Errors err);
-static unsigned int hashAlgorithm(char* key, size_t len);
-static unsigned int hashStack(Stack* stk);
-static Stack* ptrXOR(Stack* stk);
 
-ON_DEBUG(static size_t STRUCT_CANARY = time(NULL))
-ON_DEBUG(static size_t DATA_CANARY = time(NULL))
-ON_DEBUG(static FILE* fp = fopen(DUMP_FILENAME, "w"))
-ON_DEBUG(static size_t KEY = 0)
-ON_DEBUG(static size_t counter_key = 0)
-ON_DEBUG(static size_t counter_struct_canary = 0)
-ON_DEBUG(static size_t counter_data_canary = 0)
+DBG(static Errors stackErr(Stack* stk));
+DBG(static int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line));
+DBG(static const char* errorToString(Errors err));
+DBG_CANARY(static void putDataCanaries(Stack* stk));
+DBG_HASH(static unsigned int hashAlgorithm(char* key, size_t len));
+DBG_HASH(static unsigned int hashStack(Stack* stk));
+DBG_SECURE_PTR(static Stack* ptrXOR(Stack* stk));
 
-Stack* stackCtor(INIT_ARGS, size_t count, ...){
+DBG(static FILE* fp = fopen(DUMP_FILENAME, "w"));
+DBG_CANARY(static size_t STRUCT_CANARY = time(NULL));
+DBG_CANARY(static size_t counter_struct_canary = 0);
+DBG_CANARY(static size_t DATA_CANARY = time(NULL));
+DBG_CANARY(static size_t counter_data_canary = 0);
+DBG_SECURE_PTR(static size_t KEY = 0);
+DBG_SECURE_PTR(static size_t counter_key = 0);
+
+Stack* stackCtor(INIT_ARGS size_t count, ...){
     va_list argptr;
     va_start(argptr, count);
 
@@ -47,68 +52,120 @@ Stack* stackCtor(INIT_ARGS, size_t count, ...){
     stk->size = 0;
     stk->capacity = 0;
     stk->data = NULL;
-    PUT_INIT_ARGS(stk)
-    INIT_STRUCT_CANARY
-    ON_DEBUG(stk->left_canary = STRUCT_CANARY)
-    ON_DEBUG(stk->right_canary = STRUCT_CANARY)
-    ON_DEBUG(stk->hash = hashStack(stk))
 
-    INIT_XOR_KEY
+    PUT_INIT_ARGS(stk);
 
-    stk = ptrXOR(stk);
+    INIT_STRUCT_CANARY;
+    DBG_CANARY(stk->left_canary = STRUCT_CANARY);
+    DBG_CANARY(stk->right_canary = STRUCT_CANARY);
+
+    DBG_HASH(stk->hash = hashStack(stk));
+    INIT_XOR_KEY;
+
+    DBG_SECURE_PTR(stk = ptrXOR(stk));
+
     for (size_t elem = 0; elem < count; elem++){
         stackPush(stk, va_arg(argptr, StackElem));
     }
 
     va_end(argptr);
 
-    stk = ptrXOR(stk);
-    STACK_ASSERT(stk)
-    stk = ptrXOR(stk);
+    DBG_SECURE_PTR(stk = ptrXOR(stk));
+    STACK_ASSERT(stk);
+    DBG_SECURE_PTR(stk = ptrXOR(stk));
     return stk;
 }
 
 int stackPush(Stack* stk, StackElem value){
-    stk = ptrXOR(stk);
+    DBG_SECURE_PTR(stk = ptrXOR(stk));
 
-    STACK_ASSERT(stk)
+    STACK_ASSERT(stk);
 
     pushResize(stk);
     stk->data[stk->size++] = value;
-    ON_DEBUG(stk->hash = hashStack(stk))
+    DBG_HASH(stk->hash = hashStack(stk));
 
-    STACK_ASSERT(stk)
+    STACK_ASSERT(stk);
     return NO_ERROR;
 }
 
 int stackPop(Stack* stk, StackElem* value){
-    stk = ptrXOR(stk);
+    DBG_SECURE_PTR(stk = ptrXOR(stk));
 
-    STACK_ASSERT(stk)
+    STACK_ASSERT(stk);
 
     if (popResize(stk) == STACK_UNDERFLOW){
         return STACK_UNDERFLOW;
     }
 
     stk->size--;
-    stk->data[stk->size] = POISON;
     *value = stk->data[stk->size];
-    ON_DEBUG(stk->hash = hashStack(stk))
+    stk->data[stk->size] = POISON;
+    DBG_HASH(stk->hash = hashStack(stk));
 
-    STACK_ASSERT(stk)
+    STACK_ASSERT(stk);
     return NO_ERROR;
 }
 
 int stackDtor(Stack** stk){
-    *stk = ptrXOR(*stk);
-    STACK_ASSERT(*stk)
+    DBG_SECURE_PTR(*stk = ptrXOR(*stk));
+    STACK_ASSERT(*stk);
 
-    free((char*)(*stk)->data DBG(- sizeof(size_t)));
+    free((char*)(*stk)->data DBG_CANARY(- sizeof(size_t)));
     free(*stk);
     *stk = NULL;
 
     return NO_ERROR;
 }
+
+static int pushResize(Stack* stk){
+    if (stk->capacity == 0){
+        stk->capacity = 1;
+        size_t new_size = sizeof(StackElem) DBG_CANARY(+ 2 * sizeof(size_t));
+
+        stk->data = (StackElem*)calloc(1, new_size);
+        DBG_CANARY(putDataCanaries(stk));
+
+        stk->data[0] = POISON;
+    }
+
+    if (stk->size == stk->capacity){
+        stk->capacity *= PUSH_RESIZE_MULTIPLIER;
+        size_t new_size = sizeof(StackElem) * stk->capacity DBG_CANARY(+ 2 * sizeof(size_t));
+
+        stk->data = (StackElem*)realloc((char*)stk->data DBG_CANARY(- sizeof(size_t)), new_size);
+        DBG_CANARY(putDataCanaries(stk));
+
+        for (size_t elem = stk->size; elem < stk->capacity; elem++){
+            stk->data[elem] = POISON;
+        }
+    }
+
+    DBG_HASH(stk->hash = hashStack(stk));
+    STACK_ASSERT(stk);
+    return NO_ERROR;
+}
+
+static int popResize(Stack* stk){
+    if (stk->size == 0){
+        STACK_ASSERT(stk);
+        return STACK_UNDERFLOW;
+    }
+
+    if (stk->size == stk->capacity / POP_MAX_CAPACITY_DIVIDE_SIZE_VALUE){
+        size_t new_size = sizeof(StackElem) * stk->capacity DBG_CANARY(+ 2 * sizeof(size_t));
+
+        stk->capacity /= POP_RESIZE_DIVIDER;
+        stk->data = (StackElem*)realloc((char*)stk->data DBG_CANARY(- sizeof(size_t)), new_size);
+        DBG_CANARY(putDataCanaries(stk));
+    }
+
+    DBG_HASH(stk->hash = hashStack(stk));
+    STACK_ASSERT(stk);
+    return NO_ERROR;
+}
+
+#ifndef NDEBUG
 
 static Errors stackErr(Stack* stk){
     if (stk == NULL){
@@ -122,9 +179,11 @@ static Errors stackErr(Stack* stk){
     }
     for (size_t elem = stk->size; elem < stk->capacity; elem++){
         if (stk->data[elem] != POISON){
-            return  NO_ERROR;
+            return  NO_ERROR;                                        //!
         }
     }
+
+    #ifndef NDEBUG_CANARY
     if (stk->left_canary != STRUCT_CANARY){
         return LEFT_CANARY_TOUCHED;
     }
@@ -137,9 +196,13 @@ static Errors stackErr(Stack* stk){
     if (stk->data != NULL && *(size_t*)(stk->data + stk->capacity)!= DATA_CANARY){
         return RIGHT_DATA_CANARY_TOUCHED;
     }
+    #endif
+
+    #ifndef NDEBUG_HASH
     if (stk->hash != hashStack(stk)){
         return HASH_DOES_NOT_MATCH;
     }
+    #endif
 
     return NO_ERROR;
 }
@@ -155,7 +218,7 @@ static int stackDump(Stack* stk, const char* filename, const char* funcname, con
     }
     fprintf(fp, "From %s stack [%p] name = %s at %s:%lu born at %s:%lu (%s)\n", funcname, stk, stk->name, filename, line, stk->filename, stk->line, stk->funcname);
     fprintf(fp, "{\n");
-    fprintf(fp, "\t%s.left_canary[%p] = %#lX\n", stk->name, &stk->left_canary, stk->left_canary);
+    DBG_CANARY(fprintf(fp, "\t%s.left_canary[%p] = %#lX\n", stk->name, &stk->left_canary, stk->left_canary));
     fprintf(fp, "\t%s.size[%p]        = %lu\n", stk->name, &stk->size, stk->size);
     fprintf(fp, "\t%s.capacity[%p]    = %lu\n", stk->name, &stk->capacity, stk->capacity);
     if (err == STACK_OVERFLOW){
@@ -168,7 +231,7 @@ static int stackDump(Stack* stk, const char* filename, const char* funcname, con
     }
     fprintf(fp, "\n");
     if (stk->data != NULL){
-        fprintf(fp, "\tleft_data_canary[%p] = %#lX\n", (size_t*)stk->data - 1, *((size_t*)stk->data - 1));
+        DBG_CANARY(fprintf(fp, "\tleft_data_canary[%p] = %#lX\n", (size_t*)stk->data - 1, *((size_t*)stk->data - 1)));
     }
     fprintf(fp, "\t%s.data[%p] =\n", stk->name, stk->data);
     fprintf(fp, "\t{\n");
@@ -181,24 +244,16 @@ static int stackDump(Stack* stk, const char* filename, const char* funcname, con
     }
     fprintf(fp, "\t}\n");
     if (stk->data != NULL){
-        fprintf(fp, "\tright_data_canary[%p] = %#lX\n", stk->data + stk->capacity, *(size_t*)(stk->data + stk->capacity));
+        DBG_CANARY(fprintf(fp, "\tright_data_canary[%p] = %#lX\n", stk->data + stk->capacity, *(size_t*)(stk->data + stk->capacity)));
     }
-    fprintf(fp, "\t%s.right_canary = %#lX\n", stk->name, stk->right_canary);
-    fprintf(fp, "\t%s.hash = %#X\n", stk->name, stk->hash);
+    DBG_CANARY(fprintf(fp, "\t%s.right_canary = %#lX\n", stk->name, stk->right_canary));
+    DBG_HASH(fprintf(fp, "\t%s.hash = %#X\n", stk->name, stk->hash));
     if (err == HASH_DOES_NOT_MATCH){
         fprintf(fp, "(does not match with %#X)\n", hashStack(stk));
     }
     fprintf(fp, "}\n");
 
     return err;
-}
-
-static void putDataCanaries(Stack* stk){
-    INIT_DATA_CANARY
-
-    *(size_t*)stk->data = DATA_CANARY;
-    stk->data = (StackElem*)((size_t*)stk->data  + 1);
-    *(size_t*)(stk->data + stk->capacity) = DATA_CANARY;
 }
 
 #define _DESCR(str) case str: return #str;
@@ -219,50 +274,17 @@ static const char* errorToString(Errors err){
 }
 #undef _DESCR
 
-static int pushResize(Stack* stk){
-    if (stk->capacity == 0){
-        stk->data = (StackElem*)calloc(1, sizeof(StackElem) DBG(+ 2 * sizeof(size_t)));
-        stk->capacity = 1;
-        ON_DEBUG(putDataCanaries(stk))
-        stk->data[0] = POISON;
-    }
+#ifndef NDEBUG_CANARY
+static void putDataCanaries(Stack* stk){
+    INIT_DATA_CANARY
 
-    if (stk->size == stk->capacity){
-        stk->capacity *= PUSH_RESIZE_MULTIPLIER;
-        size_t new_size = sizeof(StackElem) * stk->capacity DBG(+ 2 * sizeof(size_t));
-
-        stk->data = (StackElem*)realloc((char*)stk->data - sizeof(size_t), new_size);
-        ON_DEBUG(putDataCanaries(stk))
-
-        for (size_t elem = stk->size; elem < stk->capacity; elem++){
-            stk->data[elem] = POISON;
-        }
-    }
-
-    ON_DEBUG(stk->hash = hashStack(stk))
-    STACK_ASSERT(stk)
-    return NO_ERROR;
+    *(size_t*)stk->data = DATA_CANARY;
+    stk->data = (StackElem*)((size_t*)stk->data  + 1);
+    *(size_t*)(stk->data + stk->capacity) = DATA_CANARY;
 }
+#endif
 
-static int popResize(Stack* stk){
-    if (stk->size == 0){
-        STACK_ASSERT(stk)
-        return STACK_UNDERFLOW;
-    }
-
-    if (stk->size == stk->capacity / POP_MAX_CAPACITY_DIVIDE_SIZE_VALUE){
-        size_t new_size = sizeof(StackElem) * stk->capacity DBG(+ 2 * sizeof(size_t));
-
-        stk->capacity /= POP_RESIZE_DIVIDER;
-        stk->data = (StackElem*)realloc((char*)stk->data - sizeof(size_t), new_size);
-        ON_DEBUG(putDataCanaries(stk))
-    }
-
-    ON_DEBUG(stk->hash = hashStack(stk))
-    STACK_ASSERT(stk)
-    return NO_ERROR;
-}
-
+#ifndef NDEBUG_HASH
 static unsigned int hashAlgorithm(char* key, size_t len){
     unsigned int m = 0x5bd1e995 * (size_t)key;
     unsigned int seed = 0x9164bf0a * (size_t)key;
@@ -314,24 +336,29 @@ static unsigned int hashAlgorithm(char* key, size_t len){
 
 // TODO add const everywhere you want
 static unsigned int hashStack(Stack* stk){
-    const size_t length_struct = sizeof(stk->data) + sizeof(stk->size) + sizeof(stk->capacity) + DBG(+ sizeof(size_t));
+    const size_t length_struct = sizeof(stk->data) + sizeof(stk->size) + sizeof(stk->capacity) + DBG_CANARY(+ sizeof(size_t));
     char* ptr_struct = (char*)(&stk->size);
 
     unsigned int hash1 = hashAlgorithm(ptr_struct, length_struct);
 
     unsigned int hash2 = 0;
     if (stk->data != NULL){
-        size_t length_data = stk->capacity * sizeof(StackElem) DBG(+ 2 * sizeof(size_t));
-        char* ptr_data = (char*)(stk->data) DBG(- sizeof(size_t));
+        size_t length_data = stk->capacity * sizeof(StackElem) DBG_CANARY(+ 2 * sizeof(size_t));
+        char* ptr_data = (char*)(stk->data) DBG_CANARY(- sizeof(size_t));
 
         hash2 = hashAlgorithm(ptr_data, length_data);
     }
 
     return hash1 + hash2;
 }
+#endif
 
+#ifndef NDEBUG_SECURE_PTR
 static Stack* ptrXOR(Stack* stk){
     stk = (Stack*)((size_t) stk ^ KEY);
 
     return stk;
 }
+#endif
+
+#endif
