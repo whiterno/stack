@@ -4,24 +4,24 @@
 #ifndef NDEBUG
 
 #define INIT(st) 0, #st, __FILE__, __func__, __LINE__,
-#define INIT_ARGS size_t left_canary, const char* name, const char* filename, const char* funcname, size_t line,
-#define PUT_INIT_ARGS(st) st->left_canary = left_canary; st->name = name; st->filename = filename; st->funcname = funcname; st->line = line;
+#define INIT_ARGS size_t left_canary, const char* name, const char* filename, const char* funcname, size_t line, size_t count
+#define PUT_INIT_ARGS(st) st->name = name; st->filename = filename; st->funcname = funcname; st->line = line;
 #define DUMB_ARGS(st) st, __FILE__, __func__, __LINE__
-#define STACK_ASSERT(st)                                                \
-{                                                                       \
-    if (stackErr(st)){                                                  \
-        stackDump(DUMB_ARGS(st));                                       \
-    }                                                                   \
+#define STACK_ASSERT(st)                                                        \
+{                                                                               \
+    if (stackErr(st)){                                                          \
+        stackDump(DUMB_ARGS(st));                                               \
+    }                                                                           \
 }
 #define DBG(...) __VA_ARGS__
 
 #ifndef NDEBUG_CANARY
 
 #define DBG_CANARY(...) __VA_ARGS__
-#define INIT_STRUCT_CANARY                                              \
-if (counter_struct_canary == 0){                                        \
-    counter_struct_canary++;                                            \
-    STRUCT_CANARY *= (((size_t)stk) << 8) + (((size_t)stk) >> 8);       \
+#define INIT_STRUCT_CANARY                                                      \
+if (counter_struct_canary == 0){                                                \
+    counter_struct_canary++;                                                    \
+    STRUCT_CANARY *= (((size_t)stk) << 8) + (((size_t)stk) >> 8);               \
 }
 #define INIT_DATA_CANARY                                                        \
 if (counter_data_canary == 0){                                                  \
@@ -43,7 +43,7 @@ if (counter_data_canary == 0){                                                  
 #define INIT_XOR_KEY                                \
 if (counter_key == 0){                              \
     counter_key++;                                  \
-    KEY = (size_t)time(NULL);                       \
+    KEY = (size_t)stk;                              \
 }
 
 #else
@@ -66,7 +66,7 @@ if (counter_key == 0){                              \
 #else
 
 #define INIT(st)
-#define INIT_ARGS
+#define INIT_ARGS size_t count
 #define PUT_INIT_ARGS(st)
 #define DUMB_ARGS(st)
 #define STACK_ASSERT(st)
@@ -128,7 +128,7 @@ struct Stack{
 
 #endif
 
-Stack* stackCtor(INIT_ARGS size_t count, ...);
+Stack* stackCtor(INIT_ARGS, ...);
 int stackPush(Stack* stk, StackElem value);
 int stackPop(Stack* stk, StackElem* value);
 int stackDtor(Stack** stk);
