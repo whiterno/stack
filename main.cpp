@@ -22,12 +22,12 @@ int main(){
     // return 0;
     // #endif
 
-    // #ifndef NDEBUG_CANARY
-    // printf("Yes canaries\n");
-    // st->left_canary = 0;
-    // stackDtor(&st);
-    // printf("Look in dump.txt\n");
-    // #endif
+    #ifndef NDEBUG_CANARY
+    printf("Yes canaries\n");
+    st->left_canary = 0;
+    stackDtor(&st);
+    printf("Look in dump.txt\n");
+    #endif
 
     // #ifndef NDEBUG_HASH
     // printf("Yes hash\n");

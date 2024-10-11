@@ -1,5 +1,9 @@
+#define NDEBUG
+
 #ifndef STACK_HEADER
 #define STACK_HEADER
+
+// #include "config.h"
 
 #ifndef NDEBUG
 
