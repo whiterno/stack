@@ -4,7 +4,7 @@
 #include "./stack_hcpp/stack.h"
 
 int main(){
-//     SUBMODULE UPDATED
+//     SUBMODULE UPDATED v2
 //     Stack* st = stackCtor(INIT(st) 0);
 //
 //     for (int i = 0; i < 100; i++){
