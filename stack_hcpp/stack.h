@@ -71,7 +71,7 @@ if (counter_key == 0){                              \
 
 #define INIT(st) #st, __FILE__, __func__, __LINE__,
 #define INIT_ARGS const char* name, const char* filename, const char* funcname, size_t line, size_t count
-#define PUT_INIT_ARGS(st)
+#define PUT_INIT_ARGS(st) st->name = name; st->filename = filename; st->funcname = funcname; st->line = line;
 #define DUMP_ARGS(st) st, __FILE__, __func__, __LINE__
 #define STACK_ASSERT(st)
 #define DBG(...) __VA_ARGS__
