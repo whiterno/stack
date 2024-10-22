@@ -35,8 +35,6 @@ DBG_HASH(static unsigned int hashAlgorithm(char* key, size_t len));
 DBG_HASH(static unsigned int hashStack(Stack* stk));
 DBG_SECURE_PTR(static Stack* ptrXOR(Stack* stk));
 
-DBG(static FILE* fp_bukkshit = fopen(DUMP_FILENAME, "w"));
-DBG(static FILE* fp = (fp_bukkshit == NULL) ? stderr : fp_bukkshit);
 DBG_CANARY(static size_t STRUCT_CANARY = time(NULL));
 DBG_CANARY(static size_t counter_struct_canary = 0);
 DBG_CANARY(static size_t DATA_CANARY = time(NULL));
@@ -196,6 +194,9 @@ static Errors stackErr(Stack* stk){
 }
 
 int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line){
+    FILE* fp_tmp = fopen(DUMP_FILENAME, "w");
+    fp = (fp_tmp == NULL) ? stderr : fp_tmp;
+
     Errors err = stackErr(stk);
 
     fprintf(fp, "-----------------------------------------------------------\n");
