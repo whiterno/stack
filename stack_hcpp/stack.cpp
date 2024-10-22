@@ -246,8 +246,6 @@ int stackDump(Stack* stk, const char* filename, const char* funcname, const size
     return err;
 }
 
-#ifndef NDEBUG
-
 #define _DESCR(str) case str: return #str;
 static const char* errorToString(Errors err){
     switch(err){
@@ -265,6 +263,8 @@ static const char* errorToString(Errors err){
     }
 }
 #undef _DESCR
+
+#ifndef NDEBUG
 
 #ifndef NDEBUG_CANARY
 static void putDataCanaries(Stack* stk){
