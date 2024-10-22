@@ -69,8 +69,8 @@ if (counter_key == 0){                              \
 
 #else
 
-#define INIT(st)
-#define INIT_ARGS size_t count
+#define INIT(st) #st, __FILE__, __func__, __LINE__,
+#define INIT_ARGS const char* name, const char* filename, const char* funcname, size_t line, size_t count
 #define PUT_INIT_ARGS(st)
 #define DUMP_ARGS(st) st, __FILE__, __func__, __LINE__
 #define STACK_ASSERT(st)
