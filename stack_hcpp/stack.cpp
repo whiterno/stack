@@ -36,7 +36,7 @@ DBG_HASH(static unsigned int hashStack(Stack* stk));
 DBG_SECURE_PTR(static Stack* ptrXOR(Stack* stk));
 
 FILE* fp_tmp = fopen(DUMP_FILENAME, "w");
-fp = (fp_tmp == NULL) ? stderr : fp_tmp;
+FILE* fp = (fp_tmp == NULL) ? stderr : fp_tmp;
 DBG_CANARY(static size_t STRUCT_CANARY = time(NULL));
 DBG_CANARY(static size_t counter_struct_canary = 0);
 DBG_CANARY(static size_t DATA_CANARY = time(NULL));
