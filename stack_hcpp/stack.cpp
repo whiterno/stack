@@ -169,6 +169,8 @@ static Errors stackErr(Stack* stk){
         }
     }
 
+    #ifndef NDEBUG
+
     #ifndef NDEBUG_CANARY
     if (stk->left_canary != STRUCT_CANARY){
         return LEFT_CANARY_TOUCHED;
@@ -188,6 +190,8 @@ static Errors stackErr(Stack* stk){
     if (stk->hash != hashStack(stk)){
         return HASH_DOES_NOT_MATCH;
     }
+    #endif
+
     #endif
 
     return NO_ERROR;
