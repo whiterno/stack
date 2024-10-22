@@ -10,11 +10,11 @@
 #define INIT(st) 0, #st, __FILE__, __func__, __LINE__,
 #define INIT_ARGS size_t left_canary, const char* name, const char* filename, const char* funcname, size_t line, size_t count
 #define PUT_INIT_ARGS(st) st->name = name; st->filename = filename; st->funcname = funcname; st->line = line;
-#define DUMB_ARGS(st) st, __FILE__, __func__, __LINE__
+#define DUMP_ARGS(st) st, __FILE__, __func__, __LINE__
 #define STACK_ASSERT(st)                                                        \
 {                                                                               \
     if (stackErr(st)){                                                          \
-        stackDump(DUMB_ARGS(st));                                               \
+        stackDump(DUMP_ARGS(st));                                               \
     }                                                                           \
 }
 #define DBG(...) __VA_ARGS__
@@ -72,7 +72,7 @@ if (counter_key == 0){                              \
 #define INIT(st)
 #define INIT_ARGS size_t count
 #define PUT_INIT_ARGS(st)
-#define DUMB_ARGS(st)
+#define DUMP_ARGS(st) st, __FILE__, __func__, __LINE__
 #define STACK_ASSERT(st)
 #define DBG(...) __VA_ARGS__
 #define DBG_CANARY(...)
@@ -117,10 +117,10 @@ struct Stack;
 
 struct Stack{
     DBG_CANARY(size_t left_canary);
-    DBG(const char* name);
-    DBG(const char* filename);
-    DBG(const char* funcname);
-    DBG(size_t line);
+    const char* name;
+    const char* filename;
+    const char* funcname;
+    size_t line;
 
     size_t size;
     size_t capacity;

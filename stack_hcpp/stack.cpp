@@ -156,8 +156,6 @@ static int popResize(Stack* stk){
     return NO_ERROR;
 }
 
-#ifndef NDEBUG
-
 static Errors stackErr(Stack* stk){
     if (stk == NULL){
         return STACK_NOT_FOUND;
@@ -244,6 +242,8 @@ static int stackDump(Stack* stk, const char* filename, const char* funcname, con
 
     return err;
 }
+
+#ifndef NDEBUG
 
 #define _DESCR(str) case str: return #str;
 static const char* errorToString(Errors err){
