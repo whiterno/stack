@@ -136,5 +136,6 @@ Stack* stackCtor(INIT_ARGS, ...);
 int stackPush(Stack* stk, StackElem value);
 int stackPop(Stack* stk, StackElem* value);
 int stackDtor(Stack** stk);
+int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line);
 
 #endif

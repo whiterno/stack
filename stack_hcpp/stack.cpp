@@ -29,7 +29,6 @@ static int popResize(Stack* stk);
 static int pushResize(Stack* stk);
 
 DBG(static Errors stackErr(Stack* stk));
-DBG(static int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line));
 DBG(static const char* errorToString(Errors err));
 DBG_CANARY(static void putDataCanaries(Stack* stk));
 DBG_HASH(static unsigned int hashAlgorithm(char* key, size_t len));
@@ -196,7 +195,7 @@ static Errors stackErr(Stack* stk){
     return NO_ERROR;
 }
 
-static int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line){
+int stackDump(Stack* stk, const char* filename, const char* funcname, const size_t line){
     Errors err = stackErr(stk);
 
     fprintf(fp, "-----------------------------------------------------------\n");
