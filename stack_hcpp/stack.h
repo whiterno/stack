@@ -85,22 +85,6 @@ if (counter_key == 0){                              \
 
 #endif
 
-
-
-enum Errors{
-    NO_ERROR,
-    STACK_NOT_FOUND,
-    STACK_OVERFLOW,
-    LOST_DATA,
-    STACK_UNDERFLOW,
-    POISON_TOUCHED,
-    LEFT_CANARY_TOUCHED,
-    RIGHT_CANARY_TOUCHED,
-    LEFT_DATA_CANARY_TOUCHED,
-    RIGHT_DATA_CANARY_TOUCHED,
-    HASH_DOES_NOT_MATCH
-};
-
 const char DUMP_FILENAME[] = "./dump.txt";
 const int POISON = -42;
 const int PUSH_RESIZE_MULTIPLIER = 2;

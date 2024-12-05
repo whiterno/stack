@@ -25,6 +25,20 @@ struct Stack{
 
 #endif
 
+enum Errors{
+    NO_ERROR,
+    STACK_NOT_FOUND,
+    STACK_OVERFLOW,
+    LOST_DATA,
+    STACK_UNDERFLOW,
+    POISON_TOUCHED,
+    LEFT_CANARY_TOUCHED,
+    RIGHT_CANARY_TOUCHED,
+    LEFT_DATA_CANARY_TOUCHED,
+    RIGHT_DATA_CANARY_TOUCHED,
+    HASH_DOES_NOT_MATCH
+};
+
 static int popResize(Stack* stk);
 static int pushResize(Stack* stk);
 
